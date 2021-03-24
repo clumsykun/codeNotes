@@ -14,14 +14,13 @@ Install an official release by using pip, django 2.2.8 for example, enter the co
 pip install django=2.2.8
 ```
 
-After installation, open a Python console and enter the command below to check the version.
+After installation, enter the command below to check the version.
 
-```python
-import django
-print(django.get_version())
+```bash
+python -m django --version
 ```
 
-Package **django-extensions** is a collection of custom extensions for the Django Framework.
+Package **django-extensions** is a collection of custom extensions for the Django framework.
 These include *management commands*, *additional database fields*, *admin extensions* and much more.
 Install Django Extensions by using pip, enter the command:
 
@@ -56,4 +55,5 @@ For example, if you want to run script `simple_scripts.py`, enter the command:
 ```bash
 python manage.py runscript simple_scripts
 ```
+
 
