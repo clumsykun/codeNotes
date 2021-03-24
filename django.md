@@ -5,5 +5,14 @@ It is maintained by the **Django Software Foundation (DSF)**, an American indepe
 
 ## Quick install guide
 
-Being a Python Web framework, Django requires Python.
+Being a Python web framework, Django requires Python.
 Python includes a lightweight database called SQLite so you won’t need to set up a database just yet.
+
+Installing an official release with pip, django 2.2 for example, enter the command:
+
+```bash
+pip install django=2.2
+```
+
+
+
