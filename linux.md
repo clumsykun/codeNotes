@@ -9,7 +9,7 @@ All of Red Hat's official support and training, together with the Red Hat Certif
 **CentOS** is a Linux distribution that provides a free, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux.
 In January 2014, CentOS announced the official joining with Red Hat while staying independent from RHEL, under a new CentOS governing board.
 
-## Linux frequently used command
+## Linux frequently used knowledge
 
 ### File management
 
@@ -42,6 +42,15 @@ passwd [options] [LOGIN]
 ```
 
 The passwd command changes passwords for user accounts. A normal user may only change the password for their own account, while the superuser may change the password for any account.
+
+### Privilege management
+
+The easiest way to **grant sudo privileges** to a user on CentOS is to add the user to the “wheel” group.
+Members of this group are able to run all commands via `sudo` and prompted to authenticate themselves with their password when using `sudo`.
+
+```bash
+usermod -aG wheel LOGIN
+```
 
 ### Shell Builtin Commands
 
