@@ -13,10 +13,43 @@ In January 2014, CentOS announced the official joining with Red Hat while stayin
 
 ### File management
 
-Command `touch`: used to create a file without any content.
-This command can be used to create a single file at a time: `touch file_name`.
-It also can be used to create the multiple numbers of files at the same time:
+Command `touch`: create a file without any content.
 
 ```bash
 touch file1_name file2_name file3_name 
 ```
+
+This command can be used to create a single file at a time: `touch file_name`.
+It also can be used to create the multiple numbers of files at the same time:
+
+### User management
+
+Command `useradd`: create a new user or update default new user information.
+
+```bash
+useradd [options] LOGIN
+useradd -D
+useradd -D [options]
+```
+
+Only *root* or users with *sudo privileges* can use the useradd command to create new user accounts.
+When invoked without the `-D` option, the useradd command creates a new user account using the values specified on the command line plus the default values from the system file, which is `/etc/default/useradd`.
+
+Command `passwd`: change user's password.
+
+```bash
+passwd [options] [LOGIN]
+```
+
+The passwd command changes passwords for user accounts. A normal user may only change the password for their own account, while the superuser may change the password for any account.
+
+### Shell Builtin Commands
+
+Command `source`: Read and execute commands from filename in the current shell environment and return the exit status of the last command executed from filename.
+
+```bash
+source filename [arguments]
+```
+
+If filename does not contain a slash, file names in PATH are used to find the directory containing filename.
+The file searched for in PATH need not be executable.
