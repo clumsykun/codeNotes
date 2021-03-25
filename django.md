@@ -36,34 +36,34 @@ Namely, you’ll need to auto-generate some code that establishes a Django proje
 From the command line, `cd` into a directory where you’d like to store your code, enter the command:
 
 ```code
- django-admin startproject example_app
+ django-admin startproject example_proj
 ```
 
-This command will create a example_app directory in your current directory, which looks like:
+This command will create a example_proj directory in your current directory, which looks like:
 
 ```
-example_app/
+example_proj/
     manage.py
-    example_app/
+    example_proj/
         __init__.py
         settings.py
         urls.py
         wsgi.py
 ```
 
-- `example_app/`: This outer root directory is a container for your project.The name doesn’t matter to Django, you can rename it to anything you like.
+- `example_proj/`: This outer root directory is a container for your project.The name doesn’t matter to Django, you can rename it to anything you like.
 
-- `example_app/manage.py`: A command-line utility that lets you interact with this Django project in various ways.
+- `example_proj/manage.py`: A command-line utility that lets you interact with this Django project in various ways.
 
-- `example_app/example_app/`: This inner directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. example_app.urls).
+- `example_proj/example_proj/`: This inner directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. example_proj.urls).
 
-- `example_app/example_app/__init__.py`: An empty file that tells Python that this directory should be considered a Python package.
+- `example_proj/example_proj/__init__.py`: An empty file that tells Python that this directory should be considered a Python package.
 
-- `example_app/example_app/settings.py`: Settings/configuration for this Django project. 
+- `example_proj/example_proj/settings.py`: Settings/configuration for this Django project. 
 
-- `example_app/example_app/urls.py`: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
+- `example_proj/example_proj/urls.py`: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
 
-- `example_app/example_app/wsgi.py`: An entry-point for WSGI-compatible web servers to serve your project.
+- `example_proj/example_proj/wsgi.py`: An entry-point for WSGI-compatible web servers to serve your project.
 
 ## Usage of django-extensions
 
