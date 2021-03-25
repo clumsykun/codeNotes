@@ -7,6 +7,19 @@ Its *language constructs* and *object-oriented approach* aim to help programmers
 **Anaconda** is a distribution of the Python and R programming languages for *scientific computing* (data science, machine learning applications, large-scale data processing, predictive analytics, etc.), that aims to simplify package management and deployment.
 The distribution includes data-science packages suitable for Windows, Linux, and macOS.
 
+## Configure and customize Anaconda
+
+We do not recommend adding Anaconda to the PATH manually.
+During installation, you will be asked “Do you wish the installer to initialize Anaconda3 by running conda init?”
+We recommend “yes”.
+If you enter “no”, then conda will not modify your shell scripts at all.
+In order to initialize after the installation process is done, enter the code:
+
+```bash
+source <path to conda>/bin/activate
+conda init
+```
+
 ## Configure and customize pip
 
 **pip** is a *package-management system* written in Python used to install and manage software packages. It connects to an online repository of public and paid-for private packages, called the **Python Package Index**.
