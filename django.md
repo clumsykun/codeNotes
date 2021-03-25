@@ -28,6 +28,43 @@ Install Django Extensions by using pip, enter the command:
 pip install django-extensions
 ```
 
+### Creating a project
+
+If this is your first time using Django, you’ll have to take care of some initial setup.
+Namely, you’ll need to auto-generate some code that establishes a Django project – a collection of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.
+
+From the command line, `cd` into a directory where you’d like to store your code, enter the command:
+
+```code
+ django-admin startproject example_app
+```
+
+This command will create a example_app directory in your current directory, which looks like:
+
+```
+example_app/
+    manage.py
+    example_app/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+```
+
+- `example_app/`: This outer root directory is a container for your project.The name doesn’t matter to Django, you can rename it to anything you like.
+
+- `example_app/manage.py`: A command-line utility that lets you interact with this Django project in various ways.
+
+- `example_app/example_app/`: This inner directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. example_app.urls).
+
+- `example_app/example_app/__init__.py`: An empty file that tells Python that this directory should be considered a Python package.
+
+- `example_app/example_app/settings.py`: Settings/configuration for this Django project. 
+
+- `example_app/example_app/urls.py`: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
+
+- `example_app/example_app/wsgi.py`: An entry-point for WSGI-compatible web servers to serve your project.
+
 ## Usage of django-extensions
 
 ### Command RunScript
@@ -50,10 +87,10 @@ touch scripts/__init__.py
 - All python scripts must implement a `run()` function. This is what gets called when you run the script. You can import any models or other parts of your django project to use in these scripts.
 
 Use the command `runscript` with the name of the script that you want to run.
-For example, if you want to run script `simple_scripts.py`, enter the command:
+For example, if you want to run script `example_script.py`, enter the command:
 
 ```bash
-python manage.py runscript simple_scripts
+python manage.py runscript example_script
 ```
 
 
