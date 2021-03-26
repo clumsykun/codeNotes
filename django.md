@@ -74,7 +74,7 @@ sudo yum install -y unixODBC-devel
 Install this package by enter the command:
 
 ```bash
-pip install django-pyodbc-azure
+pip install django-pyodbc-azure-2019
 ```
 
 Open the file `settings.py` on your project directory, and configure the SQL Server database access:
