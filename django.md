@@ -79,7 +79,7 @@ pip install django-pyodbc-azure
 
 Open the file `settings.py` on your project directory, and configure the SQL Server database access:
 
-```json
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
