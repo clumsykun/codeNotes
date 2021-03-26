@@ -133,6 +133,31 @@ example_proj/
 
 - `example_proj/example_proj/wsgi.py`: An entry-point for WSGI-compatible web servers to serve your project.
 
+### Create a app
+
+Each application you write in Django consists of a Python package that follows a certain convention.
+Django comes with a utility that automatically generates the basic directory structure of an app, so you can focus on writing code rather than creating directories.
+
+To create your app, make sure you’re in the same directory as `manage.py` and enter the command:
+
+```bash
+python manage.py startapp example_app
+```
+
+That’ll create a directory example_app, which is laid out like this:
+
+```
+example_app/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```
+
 ## Usage of django-extensions
 
 ### Command RunScript
