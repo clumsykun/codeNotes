@@ -13,7 +13,7 @@ Python includes a lightweight database called SQLite so you won’t need to set 
 Install an official release by using pip, django 2.2.8 for example, enter the command:
 
 ```bash
-pip install django=2.2.8
+pip install django==2.2.8
 ```
 
 After installation, enter the command below to check the version.
