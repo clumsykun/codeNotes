@@ -5,7 +5,7 @@ It is maintained by the **Django Software Foundation (DSF)**, an American indepe
 
 ## Quick guide
 
-### Installing django
+### Install django
 
 Being a Python web framework, Django requires Python.
 Python includes a lightweight database called SQLite so you won’t need to set up a database just yet.
@@ -30,7 +30,73 @@ Install Django Extensions by using pip, enter the command:
 pip install django-extensions
 ```
 
-### Creating a project
+### Use MSSQl Server as database backend
+
+Django don't support MSSQl Server as database backend officially, so Microsoft ODBC Driver is essential.
+This method runs like:
+
+```
+MSSQL Server -> MSSQL Server ODBC Driver -> django-pyodbc-azure -> django frontend 
+```
+
+**Notes**: This article explains how to install the Microsoft ODBC Driver for SQL Server on Linux.
+For more information, visit Microsoft's documentation: https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15#redhat17.
+
+Install the Microsoft ODBC Driver on Red Hat Enterprise Server and Oracle Linux:
+
+```bash
+sudo su
+
+#Download appropriate package for the OS version
+#Choose only ONE of the following, corresponding to your OS version
+
+#Red Hat Enterprise Server 6
+curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#Red Hat Enterprise Server 7 and Oracle Linux 7
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#Red Hat Enterprise Server 8 and Oracle Linux 8
+curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+exit
+sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
+sudo ACCEPT_EULA=Y yum install -y msodbcsql17
+# optional: for bcp and sqlcmd
+sudo ACCEPT_EULA=Y yum install -y mssql-tools
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
+# optional: for unixODBC development headers
+sudo yum install -y unixODBC-devel
+```
+
+`django-pyodbc-azure` is a modern fork of django-pyodbc, a Django Microsoft SQL Server external DB backend that uses ODBC by employing the pyodbc library. It supports Microsoft SQL Server and Azure SQL Database.
+Install this package by enter the command:
+
+```bash
+pip install django-pyodbc-azure
+```
+
+Open the file `settings.py` on your project directory, and configure the SQL Server database access:
+
+```json
+DATABASES = {
+    'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'database_name',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'database_host',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'MARS_Connection': True,
+        },
+    },
+}
+```
+
+### Create a project
 
 If this is your first time using Django, you’ll have to take care of some initial setup.
 Namely, you’ll need to auto-generate some code that establishes a Django project – a collection of settings for an instance of Django, including database configuration, Django-specific options and application-specific settings.
