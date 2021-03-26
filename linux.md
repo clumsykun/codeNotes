@@ -9,7 +9,7 @@ All of Red Hat's official support and training, together with the Red Hat Certif
 **CentOS** is a Linux distribution that provides a free, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux.
 In January 2014, CentOS announced the official joining with Red Hat while staying independent from RHEL, under a new CentOS governing board.
 
-## Linux frequently used knowledge
+## Linux frequently used command
 
 ### File management
 
