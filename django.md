@@ -158,6 +158,18 @@ example_app/
     views.py
 ```
 
+make django know your data models has been changed
+
+```
+python manage.py makemigrations example_app
+```
+
+rebuild table structure
+
+```
+python manage.py migrate
+```
+
 ## Usage of django-extensions
 
 ### Command RunScript
@@ -185,5 +197,3 @@ For example, if you want to run script `example_script.py`, enter the command:
 ```bash
 python manage.py runscript example_script
 ```
-
-
