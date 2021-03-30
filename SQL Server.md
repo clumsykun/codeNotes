@@ -53,3 +53,11 @@ systemctl status mssql-server
 sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
 sudo firewall-cmd --reload
 ```
+
+## SQL Server frequently used command
+
+Command `exec sp_helpindex`: Shows the index.
+
+```bash
+exec sp_helpindex [tablename]
+```
