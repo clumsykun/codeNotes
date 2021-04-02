@@ -197,3 +197,37 @@ For example, if you want to run script `example_script.py`, enter the command:
 ```bash
 python manage.py runscript example_script
 ```
+
+## HTTP technology
+
+### HTTP response status codes
+
+HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+Responses are grouped in five classes:
+
+- Informational responses (100–199)
+- Successful responses (200–299)
+- Redirects (300–399)
+- Client errors (400–499)
+- Server errors (500–599)
+
+**Response 100: Continue.**
+This interim response indicates that everything so far is OK and that the client should continue the request, or ignore the response if the request is already finished.
+
+**Response 102: Processing (WebDAV).**
+This code indicates that the server has received and is processing the request, but no response is available yet.
+
+**Response 200: OK.**
+The request has succeeded. The meaning of the success depends on the HTTP method:
+
+- `GET`: The resource has been fetched and is transmitted in the message body.
+- `PUT` or `POST`: The resource describing the result of the action is transmitted in the message body.
+- `HEAD`: The entity headers are in the message body.
+- `TRACE`: The message body contains the request message as received by the server.
+
+**Response 201: Created.**
+The request has succeeded and a new resource has been created as a result.
+This is typically the response sent after `POST` requests, or some `PUT` requests.
+
+**Response 400: Bad Request.**
+The server could not understand the request due to invalid syntax.
