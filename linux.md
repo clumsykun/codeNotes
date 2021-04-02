@@ -13,7 +13,7 @@ In January 2014, CentOS announced the official joining with Red Hat while stayin
 
 ### File management
 
-Command `touch`: create a file without any content.
+**Command** `touch`: create a file without any content.
 
 ```bash
 touch file1_name file2_name file3_name 
@@ -24,7 +24,7 @@ It also can be used to create the multiple numbers of files at the same time:
 
 ### User management
 
-Command `useradd`: create a new user or update default new user information.
+**Command** `useradd`: create a new user or update default new user information.
 
 ```bash
 useradd [options] LOGIN
@@ -35,7 +35,7 @@ useradd -D [options]
 Only *root* or users with *sudo privileges* can use the useradd command to create new user accounts.
 When invoked without the `-D` option, the useradd command creates a new user account using the values specified on the command line plus the default values from the system file, which is `/etc/default/useradd`.
 
-Command `passwd`: change user's password.
+**Command** `passwd`: change user's password.
 
 ```bash
 passwd [options] [LOGIN]
@@ -54,7 +54,7 @@ usermod -aG wheel LOGIN
 
 ### Shell Builtin Commands
 
-Command `source`: Read and execute commands from filename in the current shell environment and return the exit status of the last command executed from filename.
+**Command** `source`: Read and execute commands from filename in the current shell environment and return the exit status of the last command executed from filename.
 
 ```bash
 source filename [arguments]
