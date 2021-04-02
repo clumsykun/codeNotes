@@ -56,8 +56,10 @@ sudo firewall-cmd --reload
 
 ## SQL Server frequently used command
 
-Command `exec sp_helpindex`: Shows the index.
+**Command** `sp_helpindex`: Reports information about the indexes on a table or view.
 
-```bash
-exec sp_helpindex [tablename]
+```SQL
+USE [database name]
+EXEC sp_helpindex [table name]
+GO
 ```
