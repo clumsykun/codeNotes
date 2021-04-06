@@ -67,36 +67,8 @@ configure for vscode:
             ]
         }
     ],
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "workbench.colorCustomizations": {
-        "editorError.foreground": "#00000000",
-        "editorWarning.foreground": "#00000000",
-        "editorInfo.foreground": "#00000000"
-    },
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.snm",
-        "*.synctex(busy)",
-        "*.synctex.gz",
-        "*.synctex.gz(busy)",
-        "*.nav"
-    ]
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
 }
 ```
